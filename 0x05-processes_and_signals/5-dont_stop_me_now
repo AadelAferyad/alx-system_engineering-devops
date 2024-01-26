@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Bash script that stops 4-to_infinity_and_beyond process.
+proc=$(pgrep -a "bash" | grep "4-to_infinity" | cut -d " " -f1)
+kill "$proc"
