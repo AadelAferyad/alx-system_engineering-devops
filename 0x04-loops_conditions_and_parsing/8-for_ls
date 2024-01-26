@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #Bash script that displays
+j=0
 for i in $(ls)
 do
-	echo $i
+	echo $j-*$i
+	((j++))
 done
