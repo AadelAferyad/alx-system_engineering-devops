@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# change hosts
+
+cp /etc/hosts ~/hosts.old
+cp /etc/hosts ~/temp
+echo "localhost	127.0.0.2" > ~/temp
+echo "facebook.com	8.8.8.8" >> ~/temp
+cp -f ~/temp /etc/hosts
