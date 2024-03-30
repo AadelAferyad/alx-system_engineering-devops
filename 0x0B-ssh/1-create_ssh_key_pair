@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#create ssh keygen
+ssh-keygen -t rsa -b 4096 -f school -N "betty"
