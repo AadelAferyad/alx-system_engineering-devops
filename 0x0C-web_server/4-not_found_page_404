@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#error_404
+sudo apt install -y nginx
+echo "Hello World!" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/error.html
+replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/youtu.be\/pildU9lK6vM permanent;\n\terror_page 404 \/error.html;"
+sudo sed -i "s/server_name _;/$replacement/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
