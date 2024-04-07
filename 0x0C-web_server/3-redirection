@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#script install and config my web server (nginx) and change redirectme
+
+sudo apt install -y nginx
+echo "Hello World!" > /var/www/html/index.html
+sudo sed -i '24i\       rewrite ^/redirect_me https://youtu.be/pildU9lK6vM permanent;' /etc/nginx/sites-available/default
+sudo service nginx restart
