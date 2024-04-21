@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# setup custome header
+sudo apt install -y nginx
+echo "Hello World!" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/error.html
+replacment="server_name _;\n\tadd_header X-Served-By $(hostname);"
+sudo sed -i "s/server_name _;/$replacment/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
