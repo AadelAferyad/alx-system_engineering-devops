@@ -3,6 +3,6 @@
 sudo apt update -y
 sudo apt install -y haproxy
 arg="\nfrontend app \n\tbind *:80\n\tdefault_backend apps\nbackend apps\n\tbalance roundrobin\n\tserver serv1 52.1.156.177:80 check\n\tserver serv2 54.167.183.43:80 check\n"
-printf "%s""$arg">>/etc/haproxy/haproxy.cfg
-printf "ENABLED=1">>/etc/default/haproxy
+sudo printf "%s""$arg">>/etc/haproxy/haproxy.cfg
+sudo printf "ENABLED=1">>/etc/default/haproxy
 sudo systemctl restart haproxy
