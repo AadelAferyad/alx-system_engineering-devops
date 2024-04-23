@@ -15,7 +15,7 @@ if __name__ == "__main__":
         .format(employee_id)
     user_url = "https://jsonplaceholder.typicode.com/users/{}"\
         .format(employee_id)
-    
+
     response_todo = get(todo_url)
     response_user = get(user_url)
 
@@ -28,7 +28,6 @@ if __name__ == "__main__":
         if i['completed']:
             NUMBER_OF_DONE_TASKS += 1
             TASK_TITLE += i['title'] + "\n"
-
 
     print(f"Employee {EMPLOYEE_NAME} is done with tasks\
             {NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}")
