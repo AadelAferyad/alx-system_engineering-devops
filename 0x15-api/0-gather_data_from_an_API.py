@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-display todo list by id
+Checks student output for returning info from REST API
 """
 
 from json import loads
