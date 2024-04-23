@@ -9,7 +9,6 @@ from sys import argv
 
 
 if __name__ == "__main__":
-
     employee_id = argv[1]
     todo_url = "https://jsonplaceholder.typicode.com/users/{}/todos/"\
         .format(employee_id)
