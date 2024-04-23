@@ -9,8 +9,11 @@ from requests import get
 from sys import argv
 
 
-if __name__ == "__main__":
-    """ main """
+def main():
+    """
+    main function
+    """
+
     employee_id = argv[1]
     todo_url = "https://jsonplaceholder.typicode.com/users/{}/todos/"\
         .format(employee_id)
@@ -33,3 +36,8 @@ if __name__ == "__main__":
     print(f"Employee {EMPLOYEE_NAME} is done with tasks\
             {NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}")
     print(TASK_TITLE, end="")
+
+
+if __name__ == "__main__":
+    """ main """
+    main()
