@@ -31,4 +31,5 @@ if __name__ == "__main__":
             temp_data.append(temp_dic)
         all_data[str(user_id)] = temp_data
 
-    print(all_data, end="")
+    with open(file_name, mode="w") as fd:
+        fd.write(dumps(all_data))
