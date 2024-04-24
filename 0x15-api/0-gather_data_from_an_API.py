@@ -29,7 +29,6 @@ if __name__ == "__main__":
             NUMBER_OF_DONE_TASKS += 1
             TASK_TITLE += i['title'] + "\n"
 
-
     print(f"Employee {EMPLOYEE_NAME} is done with tasks", end="")
     print(f"({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
     print(TASK_TITLE, end="")
