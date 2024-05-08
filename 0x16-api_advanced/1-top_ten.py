@@ -1,20 +1,19 @@
 #!/usr/bin/python3
 """
-api reddit
+this doc for module
 """
 import requests
 
+headers = {"User-Agent": "haruma/1.0"}
+
 
 def top_ten(subreddit):
-    """ matchia 3icha"""
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
-    header = {"User-Agent": "haruma/v1"}
-    response = requests.get(url, allow_redirects=False, headers=header)
-
+    """method doc"""
+    url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
+    response = requests.get(url, allow_redirects=False, headers=headers)
     if response.status_code == 200:
         data = response.json()
-        dictionary = data['data']['children']
-        for i in dictionary:
-            print(i['data']['title'])
+        for post in data["data"]["children"]:
+            print(post["data"]["title"])
     else:
         print("None")
