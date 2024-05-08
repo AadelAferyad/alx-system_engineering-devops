@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ querying from reddit api"""
-from requests import get
+import requests
 
 
 def number_of_subscribers(subreddit):
@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
         return 0
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     header = {'User-Agent': 'haruma'}
-    response = get(url, headers=header)
+    response = requests.get(url, headers=header)
     if response.status_code == 200:
         r = response.json()
         return (r['data']['subscribers'])
